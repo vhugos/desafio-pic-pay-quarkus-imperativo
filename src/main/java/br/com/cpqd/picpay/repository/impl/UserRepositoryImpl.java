@@ -3,20 +3,18 @@ package br.com.cpqd.picpay.repository.impl;
 import br.com.cpqd.picpay.domain.user.UserEntity;
 import br.com.cpqd.picpay.dto.user.UserDto;
 import br.com.cpqd.picpay.repository.UserRepository;
-import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
-import io.quarkus.hibernate.orm.panache.PanacheQuery;
+import io.quarkus.hibernate.orm.panache.PanacheRepository;
 import jakarta.enterprise.context.ApplicationScoped;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @ApplicationScoped
-public class UserRepositoryImpl implements UserRepository {
+public class UserRepositoryImpl implements UserRepository, PanacheRepository<UserEntity> {
     @Override
     public UserEntity findUserById(Long id) {
         try {
-            return UserEntity.find("id", id).singleResult();
+            return find("id", id).singleResult();
         } catch (Exception e) {
             return null;
         }
@@ -25,7 +23,7 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public UserEntity findUserByEmail(String email) {
         try{
-           return UserEntity.find("email", email).singleResult();
+           return find("email", email).singleResult();
         } catch (Exception e) {
             return null;
         }
@@ -34,16 +32,26 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public UserEntity findUserByCpf(String cpf) {
         try{
-            return UserEntity.find("cpf", cpf).singleResult();
+            return find("cpf", cpf).singleResult();
         } catch (Exception e) {
             return null;
         }
     }
 
     @Override
-    public List<UserDto> findAll() {
-        List<UserEntity> all = UserEntity.findAll().list();
+    public List<UserDto> findAllUsers() {
+        List<UserEntity> all = this.listAll();
         return all.stream().map(this::convertToDto).collect(Collectors.toList());
+    }
+
+    @Override
+    public void createUser(UserEntity user) {
+        this.persist(user);
+    }
+
+    @Override
+    public void updateUser(UserEntity user) {
+        this.persist(user);
     }
 
     private UserDto convertToDto(UserEntity entity) {
