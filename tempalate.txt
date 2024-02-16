@@ -1,0 +1,55 @@
+{
+    "label": "getter",
+    "attrs": [
+           {
+            "label": "cameraName",
+            "static_value": "",
+            "type": "static",
+            "value_type": "string"
+        },
+		    {
+            "label": "description",
+            "static_value": "",
+            "type": "static",
+            "value_type": "string"
+        },
+		    {
+            "label": "ip",
+            "static_value": "",
+            "type": "static",
+            "value_type": "string"
+        },
+		    {
+            "label": "porta",
+            "static_value": "",
+            "type": "static",
+            "value_type": "string"
+        },
+		    {
+            "label": "login",
+            "static_value": "",
+            "type": "static",
+            "value_type": "string"
+        },
+		    {
+            "label": "fps",
+            "static_value": "",
+            "type": "static",
+            "value_type": "string"
+        }
+		,
+		    {
+            "label": "password",
+            "static_value": "",
+            "type": "static",
+            "value_type": "string"
+        }
+		,
+		    {
+            "label": "resolution",
+            "static_value": "",
+            "type": "static",
+            "value_type": "string"
+        }
+    ]
+}
