@@ -38,8 +38,17 @@ public class FindUserServiceImplTest {
         }
 
         @Override
-        public List<UserDto> findAll() {
+        public List<UserDto> findAllUsers() {
             return null;
+        }
+
+        @Override
+        public void createUser(UserEntity user) {
+        }
+
+        @Override
+        public void updateUser(UserEntity user) {
+
         }
     };
     private UserRepository repositoryError = new UserRepository() {
@@ -59,8 +68,18 @@ public class FindUserServiceImplTest {
         }
 
         @Override
-        public List<UserDto> findAll() {
+        public List<UserDto> findAllUsers() {
             return null;
+        }
+
+        @Override
+        public void createUser(UserEntity user) {
+
+        }
+
+        @Override
+        public void updateUser(UserEntity user) {
+
         }
     };
 

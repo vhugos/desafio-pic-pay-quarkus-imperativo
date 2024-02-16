@@ -3,6 +3,7 @@ package br.com.cpqd.picpay.service.impl;
 import br.com.cpqd.picpay.domain.user.UserEntity;
 import br.com.cpqd.picpay.dto.user.UserDto;
 import br.com.cpqd.picpay.exception.ServerException;
+import br.com.cpqd.picpay.repository.UserRepository;
 import br.com.cpqd.picpay.service.CreateUserService;
 import br.com.cpqd.picpay.service.UserServiceValidator;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -16,6 +17,9 @@ public class CreateUserServiceImpl implements CreateUserService {
     @Inject
     UserServiceValidator userServiceValidator;
 
+    @Inject
+    UserRepository userRepository;
+
     @Override
     @Transactional
     public UserDto createUser(UserDto userDto) {
@@ -27,7 +31,7 @@ public class CreateUserServiceImpl implements CreateUserService {
         userEntity.setPassword(userDto.getPassword());
         userEntity.setEmail(userDto.getEmail());
         userEntity.setFullName(userDto.getFullName());
-        userEntity.persist();
+        userRepository.createUser(userEntity);
         userDto.setId(userEntity.getId());
         return userDto;
     }

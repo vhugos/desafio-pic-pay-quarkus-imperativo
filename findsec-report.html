@@ -1,0 +1,1164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>FindBugs Report</title>
+<style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+		    color: red;
+		    font-weight: bold;
+		}
+		.priority-2 {
+		    color: orange;
+		    font-weight: bold;
+		}
+		.priority-3 {
+		    color: green;
+		    font-weight: bold;
+		}
+		.priority-4 {
+		    color: blue;
+		    font-weight: bold;
+		}
+		</style>
+<script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+</head>
+<body>
+<h1>
+<a href="http://findbugs.sourceforge.net">FindBugs</a> Report</h1>
+<h2>Project Information</h2>
+<p>Project: 
+		</p>
+<p>FindBugs version: 3.0.1</p>
+<p>Code analyzed:</p>
+<ul>
+<li>src</li>
+</ul>
+<p>
+<br/>
+<br/>
+</p>
+<h2>Metrics</h2>
+<p>2113487 lines of code analyzed,
+	in 49395 classes, 
+	in 2658 packages.</p>
+<table width="500" cellpadding="5" cellspacing="2">
+<tr class="tableheader">
+<th align="left">Metric</th>
+<th align="right">Total</th>
+<th align="right">Density*</th>
+</tr>
+<tr class="tablerow0">
+<td>High Priority Warnings</td>
+<td align="right">16</td>
+<td align="right">0.01</td>
+</tr>
+<tr class="tablerow1">
+<td>Medium Priority Warnings</td>
+<td align="right">46</td>
+<td align="right">0.02</td>
+</tr>
+<tr class="$totalClass">
+<td>
+<b>Total Warnings</b>
+</td>
+<td align="right">
+<b>62</b>
+</td>
+<td align="right">
+<b>0.03</b>
+</td>
+</tr>
+</table>
+<p>
+<i>(* Defects per Thousand lines of non-commenting source statements)</i>
+</p>
+<p>
+<br/>
+<br/>
+</p>
+<h2>Contents</h2>
+<ul>
+<li>
+<a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</li>
+<li>
+<a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+</li>
+<li>
+<a href="#Warnings_EXPERIMENTAL">Experimental Warnings</a>
+</li>
+<li>
+<a href="#Warnings_STYLE">Dodgy code Warnings</a>
+</li>
+<li>
+<a href="#Details">Details</a>
+</li>
+</ul>
+<h1>Summary</h1>
+<table width="500" cellpadding="5" cellspacing="2">
+<tr class="tableheader">
+<th align="left">Warning Type</th>
+<th align="right">Number</th>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</td>
+<td align="right">23</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+</td>
+<td align="right">11</td>
+</tr>
+<tr class="tablerow0">
+<td>
+<a href="#Warnings_EXPERIMENTAL">Experimental Warnings</a>
+</td>
+<td align="right">2</td>
+</tr>
+<tr class="tablerow1">
+<td>
+<a href="#Warnings_STYLE">Dodgy code Warnings</a>
+</td>
+<td align="right">26</td>
+</tr>
+<tr class="tablerow0">
+<td>
+<b>Total</b>
+</td>
+<td align="right">
+<b>62</b>
+</td>
+</tr>
+</table>
+<h1>Warnings</h1>
+<p>Click on a warning row to see full context information.</p>
+<h2>
+<a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65620');">
+<td>
+<span class="priority-1">Eq</span>
+</td>
+<td>com.google.common.reflect.Types$TypeVariableImpl.equals(Object) checks for operand being a reflect.TypeVariable </td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65620" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class com.google.common.reflect.Types$TypeVariableImpl<br/>In method com.google.common.reflect.Types$TypeVariableImpl.equals(Object)<br/>Actual type reflect.TypeVariable<br/>At Types.java:[line 458]<br/>Another occurrence at Types.java:[line 459]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N65801');">
+<td>
+<span class="priority-1">Eq</span>
+</td>
+<td>com.thoughtworks.xstream.core.util.XmlHeaderAwareReader.equals(Object) checks for operand being a java.io.InputStreamReader </td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N65801" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class com.thoughtworks.xstream.core.util.XmlHeaderAwareReader<br/>In method com.thoughtworks.xstream.core.util.XmlHeaderAwareReader.equals(Object)<br/>Actual type java.io.InputStreamReader<br/>At XmlHeaderAwareReader.java:[line 270]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66238');">
+<td>
+<span class="priority-1">Eq</span>
+</td>
+<td>groovy.namespace.QName.equals(Object) checks for operand being a String </td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66238" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class groovy.namespace.QName<br/>In method groovy.namespace.QName.equals(Object)<br/>Actual type String<br/>At QName.java:[line 180]<br/>Another occurrence at QName.java:[line 181]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66456');">
+<td>
+<span class="priority-1">Eq</span>
+</td>
+<td>io.netty.resolver.dns.DnsNameResolver$AddressedEnvelopeAdapter.equals(Object) checks for operand being a io.netty.handler.codec.dns.DnsResponse </td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66456" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class io.netty.resolver.dns.DnsNameResolver$AddressedEnvelopeAdapter<br/>In method io.netty.resolver.dns.DnsNameResolver$AddressedEnvelopeAdapter.equals(Object)<br/>Actual type io.netty.handler.codec.dns.DnsResponse<br/>At DnsNameResolver.java:[line 1589]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66520');">
+<td>
+<span class="priority-1">Eq</span>
+</td>
+<td>io.opentelemetry.context.internal.shaded.WeakConcurrentMap$LookupKey.equals(Object) checks for operand being a AbstractWeakConcurrentMap$WeakKey </td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66520" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class io.opentelemetry.context.internal.shaded.WeakConcurrentMap$LookupKey<br/>In method io.opentelemetry.context.internal.shaded.WeakConcurrentMap$LookupKey.equals(Object)<br/>Actual type io.opentelemetry.context.internal.shaded.AbstractWeakConcurrentMap$WeakKey<br/>At WeakConcurrentMap.java:[line 190]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66586');">
+<td>
+<span class="priority-1">Eq</span>
+</td>
+<td>io.opentelemetry.instrumentation.api.internal.cache.weaklockfree.WeakConcurrentMap$LookupKey.equals(Object) checks for operand being a AbstractWeakConcurrentMap$WeakKey </td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66586" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class io.opentelemetry.instrumentation.api.internal.cache.weaklockfree.WeakConcurrentMap$LookupKey<br/>In method io.opentelemetry.instrumentation.api.internal.cache.weaklockfree.WeakConcurrentMap$LookupKey.equals(Object)<br/>Actual type io.opentelemetry.instrumentation.api.internal.cache.weaklockfree.AbstractWeakConcurrentMap$WeakKey<br/>At WeakConcurrentMap.java:[line 166]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66864');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.apache.http.conn.scheme.SchemeSocketFactoryAdaptor.equals(Object) checks for operand being a SocketFactory </td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66864" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class org.apache.http.conn.scheme.SchemeSocketFactoryAdaptor<br/>In method org.apache.http.conn.scheme.SchemeSocketFactoryAdaptor.equals(Object)<br/>Actual type org.apache.http.conn.scheme.SocketFactory<br/>At SchemeSocketFactoryAdaptor.java:[line 91]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66928');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.apache.http.conn.scheme.SocketFactoryAdaptor.equals(Object) checks for operand being a SchemeSocketFactory </td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66928" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class org.apache.http.conn.scheme.SocketFactoryAdaptor<br/>In method org.apache.http.conn.scheme.SocketFactoryAdaptor.equals(Object)<br/>Actual type org.apache.http.conn.scheme.SchemeSocketFactory<br/>At SocketFactoryAdaptor.java:[line 91]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67061');">
+<td>
+<span class="priority-1">Eq</span>
+</td>
+<td>org.apache.maven.wagon.LazyFileOutputStream.equals(Object) checks for operand being a java.io.FileOutputStream </td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67061" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class org.apache.maven.wagon.LazyFileOutputStream<br/>In method org.apache.maven.wagon.LazyFileOutputStream.equals(Object)<br/>Actual type java.io.FileOutputStream<br/>At LazyFileOutputStream.java:[line 70]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67174');">
+<td>
+<span class="priority-1">Eq</span>
+</td>
+<td>org.bouncycastle.jcajce.provider.asymmetric.x509.X509CertificateObject.equals(Object) checks for operand being a X509CertificateInternal </td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67174" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class org.bouncycastle.jcajce.provider.asymmetric.x509.X509CertificateObject<br/>In method org.bouncycastle.jcajce.provider.asymmetric.x509.X509CertificateObject.equals(Object)<br/>Actual type org.bouncycastle.jcajce.provider.asymmetric.x509.X509CertificateInternal<br/>In &lt;Unknown&gt;</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67127');">
+<td>
+<span class="priority-1">Eq</span>
+</td>
+<td>org.bouncycastle.jcajce.provider.asymmetric.x509.X509CRLObject.equals(Object) checks for operand being a X509CRLInternal </td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67127" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class org.bouncycastle.jcajce.provider.asymmetric.x509.X509CRLObject<br/>In method org.bouncycastle.jcajce.provider.asymmetric.x509.X509CRLObject.equals(Object)<br/>Actual type org.bouncycastle.jcajce.provider.asymmetric.x509.X509CRLInternal<br/>In &lt;Unknown&gt;</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67221');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.codehaus.classworlds.ClassRealmReverseAdapter.equals(Object) checks for operand being a ClassRealm </td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67221" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class org.codehaus.classworlds.ClassRealmReverseAdapter<br/>In method org.codehaus.classworlds.ClassRealmReverseAdapter.equals(Object)<br/>Actual type org.codehaus.classworlds.ClassRealm<br/>At ClassRealmReverseAdapter.java:[line 147]<br/>Another occurrence at ClassRealmReverseAdapter.java:[line 150]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67296');">
+<td>
+<span class="priority-1">Eq</span>
+</td>
+<td>org.codehaus.groovy.reflection.CachedMethod.equals(Object) checks for operand being a reflect.Method </td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67296" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class org.codehaus.groovy.reflection.CachedMethod<br/>In method org.codehaus.groovy.reflection.CachedMethod.equals(Object)<br/>Actual type reflect.Method<br/>At CachedMethod.java:[line 143]<br/>Another occurrence at CachedMethod.java:[line 144]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67408');">
+<td>
+<span class="priority-1">Eq</span>
+</td>
+<td>org.codehaus.groovy.runtime.ConversionHandler.equals(Object) checks for operand being a reflect.Proxy </td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67408" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class org.codehaus.groovy.runtime.ConversionHandler<br/>In method org.codehaus.groovy.runtime.ConversionHandler.equals(Object)<br/>Actual type reflect.Proxy<br/>At ConversionHandler.java:[line 163]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67527');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.eclipse.parsson.JsonPatchImpl.equals(Object) fails for subtypes</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67527" style="display: none;">
+<a href="#EQ_GETCLASS_AND_CLASS_CONSTANT">Bug type EQ_GETCLASS_AND_CLASS_CONSTANT (click for details)</a>
+<br/>In class org.eclipse.parsson.JsonPatchImpl<br/>In method org.eclipse.parsson.JsonPatchImpl.equals(Object)<br/>At JsonPatchImpl.java:[line 81]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67580');">
+<td>
+<span class="priority-1">Eq</span>
+</td>
+<td>org.gradle.internal.impldep.com.google.common.reflect.Types$TypeVariableImpl.equals(Object) checks for operand being a reflect.TypeVariable </td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67580" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class org.gradle.internal.impldep.com.google.common.reflect.Types$TypeVariableImpl<br/>In method org.gradle.internal.impldep.com.google.common.reflect.Types$TypeVariableImpl.equals(Object)<br/>Actual type reflect.TypeVariable<br/>At Types.java:[line 458]<br/>Another occurrence at Types.java:[line 459]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67708');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.gradle.tooling.internal.adapter.ProtocolToModelAdapter$MixInBeanMappingAction.equals(Object) fails for subtypes</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67708" style="display: none;">
+<a href="#EQ_GETCLASS_AND_CLASS_CONSTANT">Bug type EQ_GETCLASS_AND_CLASS_CONSTANT (click for details)</a>
+<br/>In class org.gradle.tooling.internal.adapter.ProtocolToModelAdapter$MixInBeanMappingAction<br/>In method org.gradle.tooling.internal.adapter.ProtocolToModelAdapter$MixInBeanMappingAction.equals(Object)<br/>At ProtocolToModelAdapter.java:[line 1038]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67761');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.gradle.tooling.internal.adapter.ProtocolToModelAdapter$MixInMappingAction.equals(Object) fails for subtypes</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67761" style="display: none;">
+<a href="#EQ_GETCLASS_AND_CLASS_CONSTANT">Bug type EQ_GETCLASS_AND_CLASS_CONSTANT (click for details)</a>
+<br/>In class org.gradle.tooling.internal.adapter.ProtocolToModelAdapter$MixInMappingAction<br/>In method org.gradle.tooling.internal.adapter.ProtocolToModelAdapter$MixInMappingAction.equals(Object)<br/>At ProtocolToModelAdapter.java:[line 947]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67814');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.gradle.tooling.internal.adapter.ProtocolToModelAdapter$MixInTypeMappingAction.equals(Object) fails for subtypes</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67814" style="display: none;">
+<a href="#EQ_GETCLASS_AND_CLASS_CONSTANT">Bug type EQ_GETCLASS_AND_CLASS_CONSTANT (click for details)</a>
+<br/>In class org.gradle.tooling.internal.adapter.ProtocolToModelAdapter$MixInTypeMappingAction<br/>In method org.gradle.tooling.internal.adapter.ProtocolToModelAdapter$MixInTypeMappingAction.equals(Object)<br/>At ProtocolToModelAdapter.java:[line 1066]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67920');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.h2.value.TypeInfo.equals(Object) fails for subtypes</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67920" style="display: none;">
+<a href="#EQ_GETCLASS_AND_CLASS_CONSTANT">Bug type EQ_GETCLASS_AND_CLASS_CONSTANT (click for details)</a>
+<br/>In class org.h2.value.TypeInfo<br/>In method org.h2.value.TypeInfo.equals(Object)<br/>At TypeInfo.java:[line 1401]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68949');">
+<td>
+<span class="priority-1">Eq</span>
+</td>
+<td>org.testcontainers.shaded.com.google.common.reflect.Types$TypeVariableImpl.equals(Object) checks for operand being a reflect.TypeVariable </td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68949" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class org.testcontainers.shaded.com.google.common.reflect.Types$TypeVariableImpl<br/>In method org.testcontainers.shaded.com.google.common.reflect.Types$TypeVariableImpl.equals(Object)<br/>Actual type reflect.TypeVariable<br/>At Types.java:[line 458]<br/>Another occurrence at Types.java:[line 459]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69124');">
+<td>
+<span class="priority-1">Eq</span>
+</td>
+<td>org.testcontainers.shaded.org.bouncycastle.jcajce.provider.asymmetric.x509.X509CertificateObject.equals(Object) checks for operand being a X509CertificateInternal </td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69124" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class org.testcontainers.shaded.org.bouncycastle.jcajce.provider.asymmetric.x509.X509CertificateObject<br/>In method org.testcontainers.shaded.org.bouncycastle.jcajce.provider.asymmetric.x509.X509CertificateObject.equals(Object)<br/>Actual type org.testcontainers.shaded.org.bouncycastle.jcajce.provider.asymmetric.x509.X509CertificateInternal<br/>In &lt;Unknown&gt;</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N69077');">
+<td>
+<span class="priority-1">Eq</span>
+</td>
+<td>org.testcontainers.shaded.org.bouncycastle.jcajce.provider.asymmetric.x509.X509CRLObject.equals(Object) checks for operand being a X509CRLInternal </td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N69077" style="display: none;">
+<a href="#EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">Bug type EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS (click for details)</a>
+<br/>In class org.testcontainers.shaded.org.bouncycastle.jcajce.provider.asymmetric.x509.X509CRLObject<br/>In method org.testcontainers.shaded.org.bouncycastle.jcajce.provider.asymmetric.x509.X509CRLObject.equals(Object)<br/>Actual type org.testcontainers.shaded.org.bouncycastle.jcajce.provider.asymmetric.x509.X509CRLInternal<br/>In &lt;Unknown&gt;</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_CORRECTNESS">Correctness Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65551');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>com.github.dockerjava.api.model.BuildResponseItem overrides equals in ResponseItem and may not be symmetric</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65551" style="display: none;">
+<a href="#EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC">Bug type EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC (click for details)</a>
+<br/>In class com.github.dockerjava.api.model.BuildResponseItem<br/>In method com.github.dockerjava.api.model.BuildResponseItem.equals(Object)<br/>Overrides com.github.dockerjava.api.model.ResponseItem.equals(Object)<br/>At BuildResponseItem.java:[line 10]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66652');">
+<td>
+<span class="priority-1">Eq</span>
+</td>
+<td>io.vertx.codegen.type.ArrayTypeInfo.equals(Object) always returns false</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66652" style="display: none;">
+<a href="#EQ_ALWAYS_FALSE">Bug type EQ_ALWAYS_FALSE (click for details)</a>
+<br/>In class io.vertx.codegen.type.ArrayTypeInfo<br/>In method io.vertx.codegen.type.ArrayTypeInfo.equals(Object)<br/>At ArrayTypeInfo.java:[line 37]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66992');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.apache.maven.plugin.descriptor.MojoDescriptor overrides equals in org.codehaus.plexus.component.repository.ComponentDescriptor and may not be symmetric</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66992" style="display: none;">
+<a href="#EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC">Bug type EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC (click for details)</a>
+<br/>In class org.apache.maven.plugin.descriptor.MojoDescriptor<br/>In method org.apache.maven.plugin.descriptor.MojoDescriptor.equals(Object)<br/>Overrides org.codehaus.plexus.component.repository.ComponentDescriptor.equals(Object)<br/>At MojoDescriptor.java:[lines 478-492]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68026');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.postgresql.geometric.PGbox overrides equals in org.postgresql.util.PGobject and may not be symmetric</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68026" style="display: none;">
+<a href="#EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC">Bug type EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC (click for details)</a>
+<br/>In class org.postgresql.geometric.PGbox<br/>In method org.postgresql.geometric.PGbox.equals(Object)<br/>Overrides org.postgresql.util.PGobject.equals(Object)<br/>At PGbox.java:[lines 115-151]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68095');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.postgresql.geometric.PGcircle overrides equals in org.postgresql.util.PGobject and may not be symmetric</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68095" style="display: none;">
+<a href="#EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC">Bug type EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC (click for details)</a>
+<br/>In class org.postgresql.geometric.PGcircle<br/>In method org.postgresql.geometric.PGcircle.equals(Object)<br/>Overrides org.postgresql.util.PGobject.equals(Object)<br/>At PGcircle.java:[lines 99-111]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68164');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.postgresql.geometric.PGlseg overrides equals in org.postgresql.util.PGobject and may not be symmetric</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68164" style="display: none;">
+<a href="#EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC">Bug type EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC (click for details)</a>
+<br/>In class org.postgresql.geometric.PGlseg<br/>In method org.postgresql.geometric.PGlseg.equals(Object)<br/>Overrides org.postgresql.util.PGobject.equals(Object)<br/>At PGlseg.java:[lines 93-105]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68233');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.postgresql.geometric.PGpath overrides equals in org.postgresql.util.PGobject and may not be symmetric</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68233" style="display: none;">
+<a href="#EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC">Bug type EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC (click for details)</a>
+<br/>In class org.postgresql.geometric.PGpath<br/>In method org.postgresql.geometric.PGpath.equals(Object)<br/>Overrides org.postgresql.util.PGobject.equals(Object)<br/>At PGpath.java:[lines 95-122]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68302');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.postgresql.geometric.PGpoint overrides equals in org.postgresql.util.PGobject and may not be symmetric</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68302" style="display: none;">
+<a href="#EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC">Bug type EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC (click for details)</a>
+<br/>In class org.postgresql.geometric.PGpoint<br/>In method org.postgresql.geometric.PGpoint.equals(Object)<br/>Overrides org.postgresql.util.PGobject.equals(Object)<br/>At PGpoint.java:[lines 107-116]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68371');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.postgresql.geometric.PGpolygon overrides equals in org.postgresql.util.PGobject and may not be symmetric</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68371" style="display: none;">
+<a href="#EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC">Bug type EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC (click for details)</a>
+<br/>In class org.postgresql.geometric.PGpolygon<br/>In method org.postgresql.geometric.PGpolygon.equals(Object)<br/>Overrides org.postgresql.util.PGobject.equals(Object)<br/>At PGpolygon.java:[lines 77-100]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68440');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.postgresql.util.PGInterval overrides equals in PGobject and may not be symmetric</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68440" style="display: none;">
+<a href="#EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC">Bug type EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC (click for details)</a>
+<br/>In class org.postgresql.util.PGInterval<br/>In method org.postgresql.util.PGInterval.equals(Object)<br/>Overrides org.postgresql.util.PGobject.equals(Object)<br/>At PGInterval.java:[lines 500-519]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68509');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.postgresql.util.PGmoney overrides equals in PGobject and may not be symmetric</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68509" style="display: none;">
+<a href="#EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC">Bug type EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC (click for details)</a>
+<br/>In class org.postgresql.util.PGmoney<br/>In method org.postgresql.util.PGmoney.equals(Object)<br/>Overrides org.postgresql.util.PGobject.equals(Object)<br/>At PGmoney.java:[lines 92-101]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_EXPERIMENTAL">Experimental Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66368');">
+<td>
+<span class="priority-2">SKIPPED</span>
+</td>
+<td>groovyjarjarantlr4.v4.unicode.UnicodeData is too big for analysis</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66368" style="display: none;">
+<a href="#SKIPPED_CLASS_TOO_BIG">Bug type SKIPPED_CLASS_TOO_BIG (click for details)</a>
+<br/>In class groovyjarjarantlr4.v4.unicode.UnicodeData<br/>At UnicodeData.java:[lines 15-58268]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67373');">
+<td>
+<span class="priority-2">SKIPPED</span>
+</td>
+<td>org.codehaus.groovy.runtime.ArrayUtil is too big for analysis</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67373" style="display: none;">
+<a href="#SKIPPED_CLASS_TOO_BIG">Bug type SKIPPED_CLASS_TOO_BIG (click for details)</a>
+<br/>In class org.codehaus.groovy.runtime.ArrayUtil<br/>At ArrayUtil.java:[lines 55-1337]</p>
+</td>
+</tr>
+</table>
+<h2>
+<a name="Warnings_STYLE">Dodgy code Warnings</a>
+</h2>
+<table class="warningtable" width="100%" cellspacing="0">
+<tr class="tableheader">
+<th align="left">Code</th>
+<th align="left">Warning</th>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65695');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>com.google.common.reflect.Types$TypeVariableImpl.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65695" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class com.google.common.reflect.Types$TypeVariableImpl<br/>In method com.google.common.reflect.Types$TypeVariableImpl.equals(Object)<br/>At Types.java:[lines 443-463]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N65748');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>com.google.inject.internal.RealOptionalBinder$BaseAnnotation.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N65748" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class com.google.inject.internal.RealOptionalBinder$BaseAnnotation<br/>In method com.google.inject.internal.RealOptionalBinder$BaseAnnotation.equals(Object)<br/>At RealOptionalBinder.java:[lines 779-786]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65867');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>com.thoughtworks.xstream.security.AnyTypePermission.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65867" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class com.thoughtworks.xstream.security.AnyTypePermission<br/>In method com.thoughtworks.xstream.security.AnyTypePermission.equals(Object)<br/>At AnyTypePermission.java:[line 30]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N65920');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>com.thoughtworks.xstream.security.ArrayTypePermission.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N65920" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class com.thoughtworks.xstream.security.ArrayTypePermission<br/>In method com.thoughtworks.xstream.security.ArrayTypePermission.equals(Object)<br/>At ArrayTypePermission.java:[line 30]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N65973');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>com.thoughtworks.xstream.security.CGLIBProxyTypePermission.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N65973" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class com.thoughtworks.xstream.security.CGLIBProxyTypePermission<br/>In method com.thoughtworks.xstream.security.CGLIBProxyTypePermission.equals(Object)<br/>At CGLIBProxyTypePermission.java:[line 34]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66026');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>com.thoughtworks.xstream.security.InterfaceTypePermission.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66026" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class com.thoughtworks.xstream.security.InterfaceTypePermission<br/>In method com.thoughtworks.xstream.security.InterfaceTypePermission.equals(Object)<br/>At InterfaceTypePermission.java:[line 30]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66079');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>com.thoughtworks.xstream.security.NoTypePermission.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66079" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class com.thoughtworks.xstream.security.NoTypePermission<br/>In method com.thoughtworks.xstream.security.NoTypePermission.equals(Object)<br/>At NoTypePermission.java:[line 34]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66132');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>com.thoughtworks.xstream.security.PrimitiveTypePermission.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66132" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class com.thoughtworks.xstream.security.PrimitiveTypePermission<br/>In method com.thoughtworks.xstream.security.PrimitiveTypePermission.equals(Object)<br/>At PrimitiveTypePermission.java:[line 34]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66185');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>com.thoughtworks.xstream.security.ProxyTypePermission.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66185" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class com.thoughtworks.xstream.security.ProxyTypePermission<br/>In method com.thoughtworks.xstream.security.ProxyTypePermission.equals(Object)<br/>At ProxyTypePermission.java:[line 35]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66315');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>groovyjarjarantlr4.v4.runtime.misc.FlexibleHashMap.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66315" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class groovyjarjarantlr4.v4.runtime.misc.FlexibleHashMap<br/>In method groovyjarjarantlr4.v4.runtime.misc.FlexibleHashMap.equals(Object)<br/>At FlexibleHashMap.java:[line 181]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66403');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>groovyjarjarasm.asm.commons.JSRInlinerAdapter$Instantiation.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66403" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class groovyjarjarasm.asm.commons.JSRInlinerAdapter$Instantiation<br/>In method groovyjarjarasm.asm.commons.JSRInlinerAdapter$Instantiation.equals(Object)<br/>At JSRInlinerAdapter.java:[line 564]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66705');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.antlr.v4.runtime.misc.FlexibleHashMap.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66705" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class org.antlr.v4.runtime.misc.FlexibleHashMap<br/>In method org.antlr.v4.runtime.misc.FlexibleHashMap.equals(Object)<br/>At FlexibleHashMap.java:[line 177]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N66758');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.apache.commons.collections4.bidimap.TreeBidiMap.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N66758" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class org.apache.commons.collections4.bidimap.TreeBidiMap<br/>In method org.apache.commons.collections4.bidimap.TreeBidiMap.equals(Object)<br/>At TreeBidiMap.java:[line 479]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N66811');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.apache.commons.collections4.bidimap.TreeBidiMap$Inverse.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N66811" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class org.apache.commons.collections4.bidimap.TreeBidiMap$Inverse<br/>In method org.apache.commons.collections4.bidimap.TreeBidiMap$Inverse.equals(Object)<br/>At TreeBidiMap.java:[line 2252]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67474');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.codehaus.groovy.runtime.NullObject.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67474" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class org.codehaus.groovy.runtime.NullObject<br/>In method org.codehaus.groovy.runtime.NullObject.equals(Object)<br/>At NullObject.java:[line 106]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67655');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.gradle.internal.impldep.com.google.common.reflect.Types$TypeVariableImpl.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67655" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class org.gradle.internal.impldep.com.google.common.reflect.Types$TypeVariableImpl<br/>In method org.gradle.internal.impldep.com.google.common.reflect.Types$TypeVariableImpl.equals(Object)<br/>At Types.java:[lines 443-463]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N67867');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.h2.result.SearchRow.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N67867" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class org.h2.result.SearchRow<br/>In method org.h2.result.SearchRow.equals(Object)<br/>At SearchRow.java:[line 139]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N67973');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.objectweb.asm.commons.JSRInlinerAdapter$Instantiation.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N67973" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class org.objectweb.asm.commons.JSRInlinerAdapter$Instantiation<br/>In method org.objectweb.asm.commons.JSRInlinerAdapter$Instantiation.equals(Object)<br/>At JSRInlinerAdapter.java:[line 564]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68631');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.testcontainers.shaded.com.github.dockerjava.core.command.CreateContainerCmdImpl.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68631" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class org.testcontainers.shaded.com.github.dockerjava.core.command.CreateContainerCmdImpl<br/>In method org.testcontainers.shaded.com.github.dockerjava.core.command.CreateContainerCmdImpl.equals(Object)<br/>At CreateContainerCmdImpl.java:[line 619]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68684');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.testcontainers.shaded.com.github.dockerjava.core.command.InitializeSwarmCmdImpl.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68684" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class org.testcontainers.shaded.com.github.dockerjava.core.command.InitializeSwarmCmdImpl<br/>In method org.testcontainers.shaded.com.github.dockerjava.core.command.InitializeSwarmCmdImpl.equals(Object)<br/>At InitializeSwarmCmdImpl.java:[line 88]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68737');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.testcontainers.shaded.com.github.dockerjava.core.command.JoinSwarmCmdImpl.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68737" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class org.testcontainers.shaded.com.github.dockerjava.core.command.JoinSwarmCmdImpl<br/>In method org.testcontainers.shaded.com.github.dockerjava.core.command.JoinSwarmCmdImpl.equals(Object)<br/>At JoinSwarmCmdImpl.java:[line 87]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68790');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.testcontainers.shaded.com.github.dockerjava.core.command.UpdateContainerCmdImpl.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68790" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class org.testcontainers.shaded.com.github.dockerjava.core.command.UpdateContainerCmdImpl<br/>In method org.testcontainers.shaded.com.github.dockerjava.core.command.UpdateContainerCmdImpl.equals(Object)<br/>At UpdateContainerCmdImpl.java:[line 255]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68843');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.testcontainers.shaded.com.github.dockerjava.core.command.UpdateServiceCmdImpl.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68843" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class org.testcontainers.shaded.com.github.dockerjava.core.command.UpdateServiceCmdImpl<br/>In method org.testcontainers.shaded.com.github.dockerjava.core.command.UpdateServiceCmdImpl.equals(Object)<br/>At UpdateServiceCmdImpl.java:[line 105]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N68896');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.testcontainers.shaded.com.github.dockerjava.core.command.UpdateSwarmNodeCmdImpl.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N68896" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class org.testcontainers.shaded.com.github.dockerjava.core.command.UpdateSwarmNodeCmdImpl<br/>In method org.testcontainers.shaded.com.github.dockerjava.core.command.UpdateSwarmNodeCmdImpl.equals(Object)<br/>At UpdateSwarmNodeCmdImpl.java:[line 98]</p>
+</td>
+</tr>
+<tr class="tablerow1" onclick="toggleRow('N68578');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.testcontainers.shaded.com.github.dockerjava.core.DefaultDockerClientConfig.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow1">
+<td/>
+<td>
+<p id="N68578" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class org.testcontainers.shaded.com.github.dockerjava.core.DefaultDockerClientConfig<br/>In method org.testcontainers.shaded.com.github.dockerjava.core.DefaultDockerClientConfig.equals(Object)<br/>At DefaultDockerClientConfig.java:[line 316]</p>
+</td>
+</tr>
+<tr class="tablerow0" onclick="toggleRow('N69024');">
+<td>
+<span class="priority-2">Eq</span>
+</td>
+<td>org.testcontainers.shaded.com.google.common.reflect.Types$TypeVariableImpl.equals(Object) is unusual</td>
+</tr>
+<tr class="detailrow0">
+<td/>
+<td>
+<p id="N69024" style="display: none;">
+<a href="#EQ_UNUSUAL">Bug type EQ_UNUSUAL (click for details)</a>
+<br/>In class org.testcontainers.shaded.com.google.common.reflect.Types$TypeVariableImpl<br/>In method org.testcontainers.shaded.com.google.common.reflect.Types$TypeVariableImpl.equals(Object)<br/>At Types.java:[lines 443-463]</p>
+</td>
+</tr>
+</table>
+<h1>
+<a name="Details">Details</a>
+</h1>
+<h2>
+<a name="EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS">EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS: Equals checks for incompatible operand</a>
+</h2>
+
+  <p> This equals method is checking to see if the argument is some incompatible type
+(i.e., a class that is neither a supertype nor subtype of the class that defines
+the equals method). For example, the Foo class might have an equals method
+that looks like:
+</p>
+<pre>
+public boolean equals(Object o) {
+  if (o instanceof Foo)
+    return name.equals(((Foo)o).name);
+  else if (o instanceof String)
+    return name.equals(o);
+  else return false;
+</pre>
+
+<p>This is considered bad practice, as it makes it very hard to implement an equals method that
+is symmetric and transitive. Without those properties, very unexpected behavoirs are possible.
+</p>
+
+    
+<h2>
+<a name="EQ_ALWAYS_FALSE">EQ_ALWAYS_FALSE: equals method always returns false</a>
+</h2>
+
+  <p> This class defines an equals method that always returns false. This means that an object is not equal to itself, and it is impossible to create useful Maps or Sets of this class. More fundamentally, it means
+that equals is not reflexive, one of the requirements of the equals method.</p>
+<p>The likely intended semantics are object identity: that an object is equal to itself. This is the behavior inherited from class <code>Object</code>. If you need to override an equals inherited from a different
+superclass, you can use use:</p>
+<pre>
+public boolean equals(Object o) { return this == o; }
+</pre>
+
+    
+<h2>
+<a name="EQ_GETCLASS_AND_CLASS_CONSTANT">EQ_GETCLASS_AND_CLASS_CONSTANT: equals method fails for subtypes</a>
+</h2>
+
+  <p> This class has an equals method that will be broken if it is inherited by subclasses.
+It compares a class literal with the class of the argument (e.g., in class <code>Foo</code>
+it might check if <code>Foo.class == o.getClass()</code>).
+It is better to check if <code>this.getClass() == o.getClass()</code>.
+</p>
+
+    
+<h2>
+<a name="EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC">EQ_OVERRIDING_EQUALS_NOT_SYMMETRIC: equals method overrides equals in superclass and may not be symmetric</a>
+</h2>
+
+  <p> This class defines an equals method that overrides an equals method in a superclass. Both equals methods
+methods use <code>instanceof</code> in the determination of whether two objects are equal. This is fraught with peril,
+since it is important that the equals method is symmetrical (in other words, <code>a.equals(b) == b.equals(a)</code>).
+If B is a subtype of A, and A's equals method checks that the argument is an instanceof A, and B's equals method
+checks that the argument is an instanceof B, it is quite likely that the equivalence relation defined by these
+methods is not symmetric.
+</p>
+
+    
+<h2>
+<a name="EQ_UNUSUAL">EQ_UNUSUAL: Unusual equals method </a>
+</h2>
+
+  <p> This class doesn't do any of the patterns we recognize for checking that the type of the argument
+is compatible with the type of the <code>this</code> object. There might not be anything wrong with
+this code, but it is worth reviewing.
+</p>
+
+    
+<h2>
+<a name="SKIPPED_CLASS_TOO_BIG">SKIPPED_CLASS_TOO_BIG: Class too big for analysis</a>
+</h2>
+      
+    <p>This class is bigger than can be effectively handled, and was not fully analyzed for errors.
+</p>
+
+
+    </body>
+</html>

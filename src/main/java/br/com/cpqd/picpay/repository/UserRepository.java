@@ -13,6 +13,11 @@ public interface UserRepository {
 
     UserEntity findUserByCpf(String cpf);
 
-    List<UserDto> findAll();
+    List<UserDto> findAllUsers();
+
+    void createUser(UserEntity user);
+
+    void updateUser(UserEntity user);
+
 
 }

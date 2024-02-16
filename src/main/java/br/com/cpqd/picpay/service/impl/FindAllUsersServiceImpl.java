@@ -15,6 +15,6 @@ public class FindAllUsersServiceImpl implements FindAllUsersService {
     UserRepository repository;
     @Override
     public List<UserDto> findUsersById() {
-        return repository.findAll();
+        return repository.findAllUsers();
     }
 }

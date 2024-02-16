@@ -4,6 +4,8 @@ import br.com.cpqd.picpay.domain.user.UserEntity;
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
@@ -21,7 +23,10 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
-public class TransactionEntity extends PanacheEntity {
+public class TransactionEntity {
+
+    @Id
+    @GeneratedValue
     @Column(name = "ID")
     private Long id;
 
